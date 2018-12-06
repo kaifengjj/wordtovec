@@ -22,8 +22,10 @@ def write_token_to_f(open_file, output_file):
     output_file.writelines(' '.join(words))
 
 
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
 with open("wikicorpus_training.txt",'w',encoding='utf-8') as outputfile:
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     name_file = "zh_wiki_00"
     write_token_to_f(name_file,outputfile)
+    print("done")
 
